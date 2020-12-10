@@ -1,11 +1,11 @@
-.navbar {
+.tbnavbar {
   display: flex;
   height: 50px;
   margin-bottom: 10px;
   width: 100%;
 }
 
-.navbarbutton {
+.tbnavbarbutton {
   flex-grow: 1;
 }
 
@@ -32,4 +32,16 @@
 
 .timestamp {
   text-align: center;
+}
+
+.globalnavbar {
+  display: flex;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.glnavbarbutton {
+  margin: 0 2rem;
 }

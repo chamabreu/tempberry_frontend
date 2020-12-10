@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './styles.css'
 import axios from 'axios'
+import { BrowserRouter } from 'react-router-dom';
 
 
 /* AXIOS SETTINGS */
@@ -14,6 +15,8 @@ axios.defaults.baseURL = process.env.NODE_ENV === "production"
 
 
 ReactDOM.render(
-    <App />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );

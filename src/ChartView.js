@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { viewTypes } from './App'
+import { viewTypes } from './TempBerry'
 import DayView from './DayView';
 
 export default function ChartView(props) {
@@ -26,6 +26,7 @@ export default function ChartView(props) {
   useEffect(() => {
     getData()
   }, [])
+  
 
   if (rawJsonData) {
     switch (props.viewType) {

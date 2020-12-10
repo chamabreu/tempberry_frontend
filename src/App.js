@@ -1,22 +1,22 @@
-import { useState } from 'react';
-import ChartView from './ChartView';
-import NavBar from './NavBar';
-
-export const viewTypes = {
-  day: "day",
-  month: "month",
-  year: "year"
-}
+import { Route, Switch } from 'react-router-dom';
+import GlobalNavBar from './GlobalNavBar';
+import Info from './Info';
+import NotFound from './NotFound';
+import TempBerry from './TempBerry';
+import Welcome from './Welcome';
 
 function App() {
-  const [viewType, setViewType] = useState(viewTypes.day)
-
 
 
   return (
     <>
-      <NavBar setViewType={setViewType}/>
-      <ChartView viewType={viewType}/>
+      <GlobalNavBar/>
+      <Switch>
+        <Route path="/tempberry" component={TempBerry}/>
+        <Route path="/info" component={Info}/>
+        <Route path="/" component={Welcome} />
+        <Route component={NotFound} />
+      </Switch>
     </>
   )
 
